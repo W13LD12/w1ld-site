@@ -9,24 +9,25 @@ body {
     font-family: Arial, sans-serif;
     color: white;
 }
+
 nav {
-   background:linear-gradient(to right, black, lime);   
-   padding: 15px;
-   display:flex;
-   justify-content: center;
-   width: 100%;   
-    position:fixed;
-    top :0;
-    left:0;
-    z-index: 1000;}
+    background: linear-gradient(to right, black, lime);   
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;   
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
 nav a {
-    color:white;
-    text-decoration:none;
+    color: white;
+    text-decoration: none;
     padding: 10px 20px;
     margin: 0 10px;
 }
-
-
 
 .gif-container {
     width: 25%;
@@ -63,4 +64,48 @@ nav a {
 
 .desc {
     font-size: 18px;
+}
+
+/* 📱 АДАПТИВ ПОД МОБИЛУ */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .gif-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .gif-container img {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .profile {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .profile img {
+        width: 100px;
+    }
+
+    .username {
+        font-size: 24px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
 }
