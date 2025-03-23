@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -19,12 +20,17 @@
     <main>
         <h1>Свяжись со мной</h1>
         <p>Хочешь что-то обсудить? Напиши в любую соцсеть или на почту👇</p>
-
-        <ul>
-            <li>Telegram: <a href="https://t.me/@W1LD27">t.me/@W1LD27</a></li>
-            <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
-            <li>GitHub: <a href="https://github.com/w13ld12" target="_blank">w13ld12</a></li>
-        </ul>
+        <div class="contact-links">
+            <a href="tg://resolve?domain=W1LD27" class="contact-btn">
+                <i class="fab fa-telegram-plane"></i> Telegram
+            </a>
+            <a href="mailto:you@example.com" class="contact-btn">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://github.com/w13ld12" class="contact-btn">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>    
     </main>
 
 </body>

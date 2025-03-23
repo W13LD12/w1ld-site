@@ -1,7 +1,8 @@
+/* Общие стили */
 body {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #111;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,11 +12,11 @@ body {
 }
 
 nav {
-    background: linear-gradient(to right, black, lime);   
+    background: linear-gradient(to right, black, lime);
     padding: 15px;
     display: flex;
     justify-content: center;
-    width: 100%;   
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -27,8 +28,16 @@ nav a {
     text-decoration: none;
     padding: 10px 20px;
     margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+nav a:hover {
+    color: lime;
+    transform: scale(1.1);
+}
+
+/* Гифки и профиль */
 .gif-container {
     width: 25%;
     height: 100vh;
@@ -108,4 +117,74 @@ nav a {
     nav a {
         margin: 5px 0;
     }
+}
+
+/* Контакты */
+.contact-links a {
+    color: #0ff;
+    text-decoration: none;
+    border: 2px solid #0ff;
+    padding: 10px 20px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+.contact-links a:hover {
+    background-color: #0ff;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0ff;
+}
+
+/* Портфолио */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid lime;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 15px lime;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h2 {
+    color: #0ff;
+}
+
+.project-card p {
+    margin: 10px 0;
+    color: white;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #000;
+    background-color: #0ff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #00e6e6;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px lime;
 }
