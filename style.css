@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.gif-container {
+    width: 25%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gif-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px #0ff;
+}
+
+.profile img {
+    width: 150px;
+    border-radius: 10px;
+    border: 3px solid #0ff;
+}
+
+.username {
+    font-size: 32px;
+    color: #0ff;
+    margin: 10px 0;
+}
+
+.desc {
+    font-size: 18px;
+}
