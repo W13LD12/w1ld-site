@@ -2,13 +2,21 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #111;
+    background: linear-gradient(45deg, #111, #333);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
     color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 nav {
@@ -37,111 +45,6 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* Гифки и профиль */
-.gif-container {
-    width: 25%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.gif-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.profile {
-    width: 50%;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 0 20px #0ff;
-}
-
-.profile img {
-    width: 150px;
-    border-radius: 10px;
-    border: 3px solid #0ff;
-}
-
-.username {
-    font-size: 32px;
-    color: #0ff;
-    margin: 10px 0;
-}
-
-.desc {
-    font-size: 18px;
-}
-
-/* 📱 АДАПТИВ ПОД МОБИЛУ */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .gif-container {
-        width: 100%;
-        height: auto;
-    }
-
-    .gif-container img {
-        height: auto;
-        max-height: 200px;
-    }
-
-    .profile {
-        width: 90%;
-        margin: 20px 0;
-    }
-
-    .profile img {
-        width: 100px;
-    }
-
-    .username {
-        font-size: 24px;
-    }
-
-    .desc {
-        font-size: 16px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 5px 0;
-    }
-}
-
-/* Контакты */
-.contact-links a {
-    color: #0ff;
-    text-decoration: none;
-    border: 2px solid #0ff;
-    padding: 10px 20px;
-    margin: 10px;
-    display: inline-block;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: transparent;
-}
-
-.contact-links a:hover {
-    background-color: #0ff;
-    color: #000;
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #0ff;
-}
-
-/* Портфолио */
 .portfolio-container {
     display: flex;
     flex-wrap: wrap;
@@ -158,7 +61,7 @@ nav a:hover {
     width: 300px;
     text-align: center;
     box-shadow: 0 0 15px lime;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .project-card h2 {
@@ -187,4 +90,44 @@ nav a:hover {
 .project-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px lime;
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+/* Анимация градиента */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .project-card a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .project-card h2 {
+        font-size: 20px;
+    }
+
+    .project-card p {
+        font-size: 14px;
+    }
 }
